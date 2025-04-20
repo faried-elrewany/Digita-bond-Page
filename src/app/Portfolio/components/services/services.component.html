@@ -1,0 +1,33 @@
+<section id="services" class="block">
+    
+  
+    <!-- Services Section -->
+    <div class="py-16 bg-background flex justify-center items-center">
+      <div class="p-8 w-full max-w-7xl mx-auto">
+        <h1 class="fluid text-text">Our Premium Services</h1>
+        <p class="text-center max-w-2xl mx-auto mb-12 text-[var(--secondary)]">
+          Unlock the potential of our expertly crafted services. This isn't just about solutions — 
+          it's about mastering the tools, understanding your needs, and delivering with intention.
+        </p>
+      
+        <div class="service-cards">
+          <div 
+            *ngFor="let service of services; let i = index"
+            class="service-card"
+          >
+            <img [src]="service.image" [alt]="service.title" class="serve-img">
+            <div class="card-content  service-image">
+              <div class="service-icon">
+                <svg [innerHTML]="service.icon"></svg>
+              </div>
+              <h3>{{service.title}}</h3>
+              <p>{{service.description}}</p>
+              <a href="#">
+                <span>Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

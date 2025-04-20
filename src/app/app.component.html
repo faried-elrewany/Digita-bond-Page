@@ -1,0 +1,21 @@
+<div *ngIf="(loading$ | async) === false">
+
+
+<app-theme-switcher></app-theme-switcher>
+<app-hero-section></app-hero-section>
+
+<app-header></app-header>
+
+<app-about></app-about>
+<app-testimonials></app-testimonials>
+<app-services></app-services>
+<app-lets-bond></app-lets-bond>
+<app-contact></app-contact>
+<app-footer></app-footer>
+<app-speed-dial></app-speed-dial>
+<app-toast></app-toast>
+</div>
+
+<div #loadingContainer *ngIf="loading$ | async">
+  <app-page-loading></app-page-loading>
+</div>

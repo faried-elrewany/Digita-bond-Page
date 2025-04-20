@@ -1,0 +1,24 @@
+<div class="fixed    z-50 bottom-8 right-2 md:right-8">
+  <!-- Main Speed Dial Button -->
+  <button
+    class="speed-dial-button w-12 h-12 cursor-pointer bg-primary rounded-full flex items-center justify-center shadow-md shadow-white/50 transition-colors"
+    (click)="toggleMenu()"
+  >
+    <img src="/assets/icons/chat.svg" alt="Chat" class="w-6 h-6 invert-100 " loading="eager"/>
+  </button>
+
+  <!-- Speed Dial Menu -->
+  <div
+    #speedDialMenu
+    class="speed-dial-menu mt-2 space-y-2"
+    *ngIf="menuOpen"
+  >
+    <button
+      *ngFor="let item of speedDialItems"
+      (click)="onItemClicked(item)"
+      class="speed-dial-item w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg hover:bg-gray-100 transition-all"
+    >
+      <img [src]="item.imageSrc" [alt]="item.label" class="w-8 h-8" loading="eager" />
+    </button>
+  </div>
+</div>

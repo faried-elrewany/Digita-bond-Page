@@ -1,0 +1,334 @@
+.crown-img {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+  .digital span,
+.bond span {
+  display: inline-block;
+}
+
+
+button {
+    font-size: 1rem;
+    padding: 0.8em 2em;
+    border-radius: 1em;
+    color: #fff;
+    font-weight: bolder;
+    transition: all 0.3s ease;
+    box-shadow: none;
+    outline: none;
+    display: block;
+    width: fit-content;
+    background-color: #0e100f;
+  }
+  
+  button:hover {
+    border-color: #fffce1; 
+    outline: 3px solid #fffce1; 
+    outline-offset: 3px;
+  }
+   
+
+
+
+
+
+  .scroll-down {
+    text-decoration: none;
+    position: absolute;
+    right: -20px;
+    bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(90deg);
+    font-size: 15px;
+    color:#ffc302;
+  }
+  .scroll-down:hover {
+    color: #fffce1
+  }
+  .scroll-down--left {
+    left: -30px;
+    right: auto;
+  }
+  .scroll-down span {
+    /* display: inline; */
+    animation: scroll 0.5s linear infinite alternate-reverse;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(-7px);
+    }
+    100% {
+      transform: translateX(7px);
+    }
+  }
+  .scroll-down .fas {
+    /* transform: rotate(270deg); */
+    margin-left: 10px;
+  }
+  
+
+
+
+  /* Base styles */
+.main {
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Ensure text doesn't wrap */
+  .digital, .bond, .agency {
+    white-space: nowrap;
+    line-height: 0.9;
+  }
+  
+  /* Scroll down links */
+  .scroll-down {
+    position: absolute;
+    bottom: 4rem;
+    right: -1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fffce1;
+    transition: all 0.3s ease;
+  }
+  
+  .scroll-down--left {
+    right: auto;
+    left: -1rem;
+  }
+  
+  .scroll-down:hover {
+    transform: translateY(-5px);
+  }
+  
+  .scroll-down .fas {
+    margin-top: 0.5rem;
+    color: #ffc302;
+  }
+  
+  /* Gold blob animation */
+  .gold-blob {
+    animation: pulse 4s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity: 0.7;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+  
+  /* SVG filter for crown */
+  .svg-filter {
+    /* filter: drop-shadow(0 0 5px rgba(255, 195, 2, 0.5)); */
+  }
+  
+  /* Button styling */
+  /* button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 195, 2, 0.3);
+  }
+  
+  button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 195, 2, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  button:hover::after {
+    transform: translateX(0);
+  } */
+  
+  /* Media queries for extreme cases */
+  @media (max-width: 340px) {
+    .digital, .bond {
+      font-size: 2rem;
+    }
+    
+    .agency {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-height: 600px) {
+    .main {
+      padding-top: 1rem;
+    }
+    
+    .scroll-down {
+      display: none;
+    }
+  }
+  
+  /* Ensure the typewriter text doesn't overflow */
+  .text-base, .text-sm, .text-lg, .text-xl {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Floating animation for gold particles */
+@keyframes float {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .animate-float {
+    animation: float linear infinite;
+  }
+  
+  /* Client showcase styling */
+  .client-logo {
+    filter: grayscale(100%) brightness(2);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+  
+  .client-logo:hover {
+    filter: grayscale(0%) brightness(1);
+    opacity: 1;
+  }
+
+
+  .gold-blob {
+    animation: float-wave 8s ease-in-out infinite;
+  }
+  
+  @keyframes float-wave {
+    0%, 100% {
+      transform: translate(25%, -50%) rotate(0deg);
+    }
+    25% {
+      transform: translate(30%, -45%) rotate(3deg);
+    }
+    50% {
+      transform: translate(20%, -55%) rotate(-2deg);
+    }
+    75% {
+      transform: translate(30%, -50%) rotate(4deg);
+    }
+  }
+
+
+  .gold-blob {
+    will-change: transform; /* Optimize animations */
+    filter: drop-shadow(0 0 10px rgba(255, 195, 2, 0.3));
+  }@keyframes float {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.7;
+      animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-15px) rotate(5deg);
+    }
+  }.digital, .bond {
+    margin-bottom: 0.1em; /* Tighter line spacing */
+  }
+  
+  .agency {
+    margin-top: 0.5rem; /* Reduced from 2rem */
+  }
+
+  @keyframes float-up {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 0.7;
+    }
+    70% {
+      opacity: 0.4;
+    }
+    100% {
+      transform: translateY(-100vh) translateX(10px);
+      opacity: 0;
+    }
+  }
+  @keyframes float-up-twinkle {
+    0% {
+      transform: translateY(0) translateX(0);
+      opacity: 0;
+    }
+    20% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 0.6;
+    }
+    80% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateY(-100vh) translateX(-5px);
+      opacity: 0;
+    }
+  }
+  .animate-float-up {
+    animation: float-up linear infinite;
+  }
+  .animate-float-up-twinkle {
+    animation: float-up-twinkle linear infinite;
+  }
+
+
+  
+  @keyframes agencyPulse {
+    0%, 100% {
+      letter-spacing: 2px;
+      color:var(--text)
+    }
+    50% {
+      letter-spacing: 8px;
+      color: var(--primary);
+    }
+  }
+  
+  .agency {
+    animation:
+      agencyPulse 3s ease-in-out 1s infinite alternate;
+  }
+
+/* animations.css or in your component's styles */
+.bond span, .digital span {
+  transition: color 0s ease-out 0s; /* Default state (fast transition) */
+}
+
+.bond span:hover, .digital span:hover {
+  color: var(--primary);
+  transition: color 0s ease-in 0s; /* Immediate hover effect */
+}
+
+.bond span:not(:hover), .digital span:not(:hover) {
+  transition: color .4s ease-out 0s; /* Slow fade-out when mouse leaves */
+}
+

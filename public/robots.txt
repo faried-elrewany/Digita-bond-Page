@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://digital-bond.netlify.app/sitemap.xml

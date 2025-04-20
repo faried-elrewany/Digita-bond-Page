@@ -16,6 +16,8 @@
             "outputPath": "dist/digital-bond",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "baseHref": "/Digita-bond-Page/",
+          "deployUrl": "/Digita-bond-Page/",
             "polyfills": [
               "zone.js"
             ],
